@@ -70,7 +70,8 @@ namespace SiteExtensions.Administration
             var directoryToExpandTo = Path.Combine(_localRepository.Source, package.Id);
             foreach (var file in package.GetContentFiles())
             {
-                var fullPath = Path.Combine(directoryToExpandTo, file.Path);
+                string pathWithoutContextPrefix = file.Path.Substring("content/".Length);
+                var fullPath = Path.Combine(directoryToExpandTo, pathWithoutContextPrefix);
                 Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
 
                 using (Stream writeStream = File.OpenWrite(fullPath),
@@ -78,6 +79,13 @@ namespace SiteExtensions.Administration
                 {
                     readStream.CopyTo(writeStream);
                 }
+            }
+
+            var packageFile = Path.Combine(directoryToExpandTo, package.GetFullName() + ".nupkg");
+            using (Stream readStream = package.GetStream(),
+                          writeStream = File.OpenWrite(packageFile))
+            {
+                readStream.CopyTo(writeStream);
             }
         }
 
