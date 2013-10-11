@@ -2,10 +2,11 @@
 
 @using System.Globalization;
 @using NuGet;
+@using SiteExtensions.Administration;
+@using SiteExtensions.Administration.Resources;
 
 @section PackageHead{
     <script type="text/javascript" src="@Href("scripts/Default.js")"></script>
-    <noscript>@PackageManagerResources.JavascriptRequired</noscript>
 }
 @{ 
     Page.SectionTitle = PackageManagerResources.SectionTitle;
@@ -17,13 +18,6 @@
     var view = GetView(PageUtils.GetFilterValue(Request, FilterCookieName, "view"));
     var searchTerm = Request.QueryString["search"];
     var packageSourceName = PageUtils.GetFilterValue(Request, FilterCookieName, "source");
-
-    var packageSource = PageUtils.GetPackageSource(packageSourceName);
-
-    PageUtils.PersistFilter(Response, FilterCookieName, new Dictionary<string, string> { 
-                { "view", view.ToString() }, 
-                { "source", packageSourceName },
-    });
 
     // Add values to ModelState
     ModelState.SetModelValue("view", view.ToString());
@@ -38,16 +32,16 @@
 
         IEnumerable<IPackage> packages;
 
-        projectManager = new WebProjectManager(packageSource.Source, PackageManagerModule.SiteRoot);
+        projectManager = new WebProjectManager();
         // Read packages
         switch (view) {
             case View.Updates:
-                packages = projectManager.GetPackagesWithUpdates(searchTerm, packageSource.FilterPreferredPackages);
+                packages = projectManager.GetPackagesWithUpdates(searchTerm);
                 break;
             case View.Online:
-                IQueryable<IPackage> remotePackages = projectManager.GetRemotePackages(searchTerm, packageSource.FilterPreferredPackages);
+                IQueryable<IPackage> remotePackages = projectManager.GetRemotePackages(searchTerm);
                 totalPackages = remotePackages.Count();
-                packages = WebProjectManager.CollapseVersions(remotePackages);
+                packages = remotePackages;
                 break;
             default:
                 packages = projectManager.GetInstalledPackages(searchTerm);
@@ -88,33 +82,18 @@
 
         if (message != null) { 
             <div class="success message">
-                <img class="inline" src="@Href(SiteAdmin.GetVirtualPath("~/images/ok.png"))" alt="@Html.Raw(message)" />&nbsp;@Html.Raw(message)
+                <img class="inline" src="@Href("~/images/ok.png")" alt="@Html.Raw(message)" />&nbsp;@Html.Raw(message)
             </div>
             <br />
         }
     }
 }
-<form method="get" action="" class="group">
+<form method="get" action="@Href("~/")" class="group">
     <div class="left form-actions">
         <label>@PackageManagerResources.ShowLabel:
         @Html.DropDownList("view", from v in new[] { View.Installed, View.Online, View.Updates }
                                    select new SelectListItem { Text = GetViewName(v), Value = v.ToString() })
         </label>                           
-   
-        @if (PackageManagerModule.PackageSources.Count() > 1) {
-            <span @if (view == View.Installed) { @Html.Raw("style=\"display: none\"");
-                  }>
-                &nbsp;
-                <label>@PackageManagerResources.PackageSourceLabel:</label>
-                @Html.DropDownList("source", from f in PackageManagerModule.PackageSources.OrderBy(p => p.Name)
-                                             select new SelectListItem {
-                                                 Value = f.Name,
-                                                 Text = f.Name,
-                                                 Selected = f.Name.Equals(packageSourceName, StringComparison.OrdinalIgnoreCase)
-                                             }
-                                   )
-            </span>
-        }
     </div>
 
     <div class="right">
@@ -127,7 +106,7 @@
 </form>
 
 @if (view != View.Online && !projectManager.LocalRepository.GetPackages().Any()) {
-    var onlineLink = Href(PageUtils.GetPackagesHome()) + "?view=" + View.Online;
+    var onlineLink = Href("~/") + "?view=" + View.Online;
     @Html.Raw(String.Format(CultureInfo.CurrentCulture, PackageManagerResources.NoPackagesInstalled, Html.Encode(onlineLink)))
     return;
 }
@@ -178,7 +157,7 @@ else {
     private static View GetView(string viewName) {
         View view;
         if (String.IsNullOrEmpty(viewName) || !_viewMapping.TryGetValue(viewName, out view)) {
-            view = View.Installed;
+            view = View.Online;
         }
         return view;
     }

@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SiteExtensions.Administration</name>
+    </assembly>
+    <members>
+        <member name="M:SiteExtensions.Administration.PageUtils.BuildQueryString(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Constructs a query string from an IDictionary
+            </summary>
+        </member>
+        <member name="T:SiteExtensions.Administration.Resources.PackageManagerResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.AddPackageSourceLabel">
+            <summary>
+              Looks up a localized string similar to Add Package Source.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.AreYouSureUninstall">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to uninstall &lt;strong&gt;{0}&lt;/strong&gt;?.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.AuthorsLabel">
+            <summary>
+              Looks up a localized string similar to Author.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.BadRequest">
+            <summary>
+              Looks up a localized string similar to Bad Request.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.Cancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.ClearLabel">
+            <summary>
+              Looks up a localized string similar to Clear.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.DefaultPackageSourceName">
+            <summary>
+              Looks up a localized string similar to Default.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.DeleteLabel">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.Disclaimer">
+            <summary>
+              Looks up a localized string similar to By clicking &quot;Install&quot; you agree to the license terms for the package(s) above. If you do not agree to the license terms, click &quot;Cancel.&quot; Each package is licensed to you by its owner. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.InstalledLabel">
+            <summary>
+              Looks up a localized string similar to Installed.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.InstallPackage">
+            <summary>
+              Looks up a localized string similar to Install.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.InstallPackageDesc">
+            <summary>
+              Looks up a localized string similar to Installing package {0}..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.InstallSuccess">
+            <summary>
+              Looks up a localized string similar to Package &lt;strong&gt;{0}&lt;/strong&gt; was successfully installed..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.JavascriptRequired">
+            <summary>
+              Looks up a localized string similar to JavaScript is required to correctly view this page..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.ManageSourcesDesc">
+            <summary>
+              Looks up a localized string similar to Use this page to manage your package sources..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.ManageSourcesTitle">
+            <summary>
+              Looks up a localized string similar to Manage Package Sources.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.ModuleDesc">
+            <summary>
+              Looks up a localized string similar to A collection of tools to automate the process of installing, upgrading, configuring, and removing packages from an ASP.NET application..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.ModuleTitle">
+            <summary>
+              Looks up a localized string similar to Package Manager.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.NextText">
+            <summary>
+              Looks up a localized string similar to Next.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.NoPackagesFound">
+            <summary>
+              Looks up a localized string similar to No packages found..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.NoPackagesInstalled">
+            <summary>
+              Looks up a localized string similar to No packages installed. &lt;p&gt;&lt;a href=&quot;{0}&quot;&gt;Install packages from an online feed&lt;/a&gt;&lt;/p&gt;.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.NuGetFeed">
+            <summary>
+              Looks up a localized string similar to Default (All).
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.OnlineLabel">
+            <summary>
+              Looks up a localized string similar to Online.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.PackageInstallationError">
+            <summary>
+              Looks up a localized string similar to Error installing package &quot;{0}&quot;:.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.PackageSourceFileInstructions">
+            <summary>
+              Looks up a localized string similar to Unable to read package source file. Ensure that the file &quot;{0}&quot; is writeable and the contents of the file have not been modified externally..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.PackageSourceLabel">
+            <summary>
+              Looks up a localized string similar to Source.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.PackageUninstallationError">
+            <summary>
+              Looks up a localized string similar to Error occurred uninstalling package &quot;{0}&quot;:.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.PackageUpdateError">
+            <summary>
+              Looks up a localized string similar to Error occurred updating package &quot;{0}&quot;:.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.PageLabel">
+            <summary>
+              Looks up a localized string similar to Page.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.PreviousText">
+            <summary>
+              Looks up a localized string similar to Previous.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.PrivacyStatement">
+            <summary>
+              Looks up a localized string similar to Privacy Statement.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.RemoveDependencies">
+            <summary>
+              Looks up a localized string similar to Remove Dependencies?.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.RestoreDefaultSources">
+            <summary>
+              Looks up a localized string similar to Restore Default .
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.SearchLabel">
+            <summary>
+              Looks up a localized string similar to Search.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.SectionTitle">
+            <summary>
+              Looks up a localized string similar to Packages.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.ShowLabel">
+            <summary>
+              Looks up a localized string similar to Show.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.SourceNameLabel">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.SourceUrlLabel">
+            <summary>
+              Looks up a localized string similar to Source.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.UninstallPackage">
+            <summary>
+              Looks up a localized string similar to Uninstall.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.UninstallPackageDesc">
+            <summary>
+              Looks up a localized string similar to Uninstalling package {0}..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.UninstallSuccess">
+            <summary>
+              Looks up a localized string similar to Package &lt;strong&gt;{0}&lt;/strong&gt; was successfully uninstalled..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.UnknownFrameworkReference">
+            <summary>
+              Looks up a localized string similar to Unknown framework assembly: &quot;{0}&quot;.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.UpdatePackage">
+            <summary>
+              Looks up a localized string similar to Update.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.UpdatePackageDesc">
+            <summary>
+              Looks up a localized string similar to Updating package {0} to version {1}..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.UpdatesLabel">
+            <summary>
+              Looks up a localized string similar to Updates.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.UpdateSuccess">
+            <summary>
+              Looks up a localized string similar to Package &lt;strong&gt;{0}&lt;/strong&gt; was successfully updated..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.Validation_InvalidPackageSourceUrl">
+            <summary>
+              Looks up a localized string similar to Invalid source url..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.Validation_PackageSourceAlreadyExists">
+            <summary>
+              Looks up a localized string similar to Specified package source already exists..
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.ViewLicenseTerms">
+            <summary>
+              Looks up a localized string similar to View License Terms.
+            </summary>
+        </member>
+        <member name="P:SiteExtensions.Administration.Resources.PackageManagerResources.WordSeparator">
+            <summary>
+              Looks up a localized string similar to , .
+            </summary>
+        </member>
+    </members>
+</doc>

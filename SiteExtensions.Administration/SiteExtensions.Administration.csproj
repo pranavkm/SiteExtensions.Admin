@@ -76,10 +76,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Framework\packages\WebProjectManager.cs">
+    <Compile Include="Framework\WebProjectManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Framework\packages\PageUtils.cs" />
+    <Compile Include="Framework\PageUtils.cs" />
     <Compile Include="Resources\PackageManagerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,7 +88,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Framework\packages\PackageExtensions.cs" />
+    <Compile Include="Framework\PackageExtensions.cs" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
